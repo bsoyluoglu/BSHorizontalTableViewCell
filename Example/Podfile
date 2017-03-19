@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BSHorizontalTableViewCell_Example' do
+  pod 'BSHorizontalTableViewCell', :path => '../'
+
+  target 'BSHorizontalTableViewCell_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
