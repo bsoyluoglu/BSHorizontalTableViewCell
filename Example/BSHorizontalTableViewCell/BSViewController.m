@@ -67,7 +67,7 @@
     }
     
     int rand = arc4random_uniform(5)+2;
-    //For demo purposes I wanted atleast 2 views.
+    //For demo purposes I wanted atleast 3 views.
     NSMutableArray<UIView *> *views = [NSMutableArray new];
     
     //Random color views
