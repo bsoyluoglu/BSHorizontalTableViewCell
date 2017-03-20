@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSHorizontalTableViewCell'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Instagram style UITableViewCell that has UIPageViewController built in.'
 
 # This description is used to generate tags and improve search results.
