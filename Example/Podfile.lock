@@ -1,0 +1,16 @@
+PODS:
+  - BSHorizontalTableViewCell (0.1.0)
+
+DEPENDENCIES:
+  - BSHorizontalTableViewCell (from `../`)
+
+EXTERNAL SOURCES:
+  BSHorizontalTableViewCell:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BSHorizontalTableViewCell: a4c4c0d01da2411f5827e0319605bf4d0a61e8b1
+
+PODFILE CHECKSUM: 317930dfe2726b055bf75f606e9d4328a0b255ba
+
+COCOAPODS: 1.1.1
