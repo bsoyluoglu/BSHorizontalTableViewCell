@@ -10,6 +10,10 @@
 
 @interface BSHorizontalTableViewCell : UITableViewCell
 
+-(instancetype)initWithStyle:(UITableViewCellStyle)style
+             reuseIdentifier:(NSString *)reuseIdentifier
+                  isInfinite:(BOOL) isInfinite;
+
 -(void)setDisplayViews:(NSArray<UIView *> *)displayViews;
 
 @end

@@ -13,7 +13,9 @@
 @property UIPageViewController *pageViewController;
 
 @property NSInteger currentPage;
-@property NSArray<UIView *> *displayViews;
+@property (nonatomic) NSArray<UIView *> *displayViews;
+
+@property BOOL isInfinite;
 
 @end
 
@@ -21,8 +23,11 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style
              reuseIdentifier:(NSString *)reuseIdentifier
+                  isInfinite:(BOOL) isInfinite
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    self.isInfinite = isInfinite;
     
     self.pageViewController =
     [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
@@ -114,6 +119,10 @@
     
     idx ++;
     
+    if (self.isInfinite == YES) {
+        idx = idx%self.displayViews.count;
+    }
+    
     if (idx == self.displayViews.count) {
         return nil;
     }
@@ -125,6 +134,10 @@
      viewControllerBeforeViewController:(UIViewController *)viewController
 {
     NSInteger idx = viewController.view.tag;
+    
+    if (idx == 0 && self.isInfinite){
+        idx = self.displayViews.count;
+    }
     
     if (idx == 0) {
         return nil;

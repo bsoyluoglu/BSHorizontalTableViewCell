@@ -63,7 +63,7 @@
     {
         cell = [[BSHorizontalTableViewCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
-                reuseIdentifier:@"BSRow"];
+                reuseIdentifier:@"BSRow" isInfinite:YES];
     }
     
     int rand = arc4random_uniform(5)+2;
